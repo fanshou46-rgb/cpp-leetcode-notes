@@ -14,7 +14,7 @@
 | 2026-09-15 | 堆、priority_queue、pair、tuple | [查看笔记](knowledge/heap-basics.md) |
 | 2026-09-16 | 堆逆向恢复、大小写判断 | [查看笔记](daily/2026-09-16.md) |
 | 2026-09-17 | 字符串格式化、字符过滤、重复子串判断 | [查看笔记](daily/2026-09-17.md) |
-| 2026-09-19 | 数组进位、山脉数组、单调栈贪心、密钥格式化 | [查看笔记](daily/2026-09-19.md) |
+| 2026-09-19 | 数组、单调栈、字符串匹配、旋转字符串、KMP | [查看笔记](daily/2026-09-19.md) |
 
 ## 重点题目
 
@@ -27,7 +27,8 @@
 ## 知识专题
 
 - [位运算](knowledge/bit-operations.md)：补码、Lowbit、位掩码与异或分组。
-- [字符串基础](knowledge/string-basics.md)：find、substr、stoi、字符判断与遍历。
+- [字符串基础](knowledge/string-basics.md)：find、string::npos、substr、旋转与重复拼接。
+- [KMP 字符串匹配](knowledge/kmp.md)：LPS、失配跳转与 O(n+m) 匹配。
 - [数组原地标记](knowledge/in-place-marking.md)：值到下标映射与正负号标记。
 - [栈基础](knowledge/stack-basics.md)：基础操作、表达式求值与调用栈。
 - [队列基础](knowledge/queue-basics.md)：FIFO、queue 基本操作、模拟与 BFS。
