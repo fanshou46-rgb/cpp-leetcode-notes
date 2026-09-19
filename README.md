@@ -9,8 +9,17 @@
 | 2026-09-09 | 数组、vector、计数、位运算 | [查看笔记](daily/2026-09-09.md) |
 | 2026-09-10 | 二叉树、前缀和、原地标记、栈、字符串解析 | [查看笔记](daily/2026-09-10.md) |
 | 2026-09-11 | 频次数组、状态恢复、单调栈 | [查看笔记](daily/2026-09-11.md) |
+| 2026-09-13 | 单调栈、柱状图最大矩形、双 0 哨兵 | [查看笔记](daily/2026-09-13.md) |
 | 2026-09-14 | 队列、循环模拟、双栈实现队列、摊还复杂度 | [查看笔记](daily/2026-09-14.md) |
 | 2026-09-15 | 堆、priority_queue、pair、tuple | [查看笔记](knowledge/heap-basics.md) |
+
+## 重点题目
+
+- [84. 柱状图中最大的矩形](problems/84-largest-rectangle-in-histogram/)：单调栈、左右双 0 哨兵。
+- [373. 查找和最小的 K 对数字](problems/373-k-smallest-pairs/)：小根堆、tuple、多路归并。
+- [645. 错误的集合](problems/645-set-mismatch/)：计数、原地标记、位运算。
+- [1046. 最后一块石头的重量](problems/1046-last-stone-weight/)：大根堆。
+- [1354. 多次求和构造目标数组](problems/1354-construct-target-array-with-multiple-sums/)：大根堆、逆向思维、取模优化。
 
 ## 知识专题
 
