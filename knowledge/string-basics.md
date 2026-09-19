@@ -90,6 +90,10 @@ int x = c - '0';  // 7
 isdigit(c);  // 是否为数字字符
 isalpha(c);  // 是否为字母
 isalnum(c);  // 是否为字母或数字
+isupper(c);  // 是否为大写字母
+islower(c);  // 是否为小写字母
+toupper(c);  // 转成大写
+tolower(c);  // 转成小写
 ```
 
 注意：`isdigit()` 接收的是字符，不是整个 `string`。对于 `"-13"` 这样的字符串，不应只检查第一个字符来判断整个字符串是否为数字。
@@ -139,7 +143,20 @@ substr() -> 截取字段
 stoi()   -> 把数字字段转成整数
 ```
 
-## 八、复习清单
+## 八、重复子字符串的 s+s 技巧
+
+如果字符串 `s` 由某个更短子串重复构成，那么 `s+s` 去掉首尾字符后仍然包含完整的 `s`：
+
+```cpp
+string t = s + s;
+t = t.substr(1, t.size() - 2);
+
+bool ok = t.find(s) != string::npos;
+```
+
+这是 LeetCode 459「重复的子字符串」的经典判断方法。
+
+## 九、复习清单
 
 - [ ] 会使用 `size / empty / front / back`。
 - [ ] 知道 `find()` 返回位置下标，未找到时为 `string::npos`。
