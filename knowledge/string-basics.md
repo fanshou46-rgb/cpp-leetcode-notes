@@ -13,6 +13,13 @@ s.back();      // 最后一个字符
 s[i];          // 下标访问
 ```
 
+`front()`、`back()` 还能直接修改首尾字符：
+
+```cpp
+s.front() = 'H';
+s.back() = '!';
+```
+
 访问 `front()`、`back()` 前应确保字符串非空。
 
 ## 二、查找 find
@@ -26,6 +33,22 @@ size_t pos = s.find(':');
 ```cpp
 string::npos
 ```
+
+标准判断：
+
+```cpp
+if (s.find("abc") != string::npos) {
+    // 找到了
+}
+```
+
+```cpp
+if (s.find("abc") == string::npos) {
+    // 没找到
+}
+```
+
+`string::npos` 可以理解为 `size_t(-1)` 转换后的最大无符号值。因此有时与 `-1` 比较也会得到预期结果，但不推荐依赖这种隐式类型转换，应直接写 `string::npos`。
 
 从指定位置继续查找：
 
@@ -156,12 +179,70 @@ bool ok = t.find(s) != string::npos;
 
 这是 LeetCode 459「重复的子字符串」的经典判断方法。
 
-## 九、复习清单
+## 九、旋转字符串的双倍串技巧
+
+若两个字符串长度相同，`s` 是 `goal` 的旋转结果，当且仅当 `s` 是 `goal + goal` 的子串：
+
+```cpp
+bool rotateString(string s, string goal) {
+    return s.size() == goal.size() &&
+           (goal + goal).find(s) != string::npos;
+}
+```
+
+例如：
+
+```text
+goal = "abcde"
+goal + goal = "abcdeabcde"
+```
+
+其中包含所有长度为 5 的旋转结果。
+
+## 十、重复拼接直到覆盖目标
+
+对于“重复若干次 a，使 b 成为子串”的题型：
+
+```cpp
+string s = a;
+int cnt = 1;
+
+while (s.size() < b.size()) {
+    s += a;
+    cnt++;
+}
+
+if (s.find(b) != string::npos)
+    return cnt;
+
+s += a;
+
+if (s.find(b) != string::npos)
+    return cnt + 1;
+
+return -1;
+```
+
+先重复到长度至少覆盖 `b`，如果仍未匹配，再补一份 `a` 处理跨边界情况。
+
+不要把“每次追加原始 a”误写成：
+
+```cpp
+a += a;
+```
+
+因为这会使字符串长度不断翻倍。
+
+## 十一、复习清单
 
 - [ ] 会使用 `size / empty / front / back`。
+- [ ] 知道 `front / back` 前需要保证字符串非空。
 - [ ] 知道 `find()` 返回位置下标，未找到时为 `string::npos`。
+- [ ] 判断查找结果时优先使用 `string::npos`，不依赖 `-1`。
 - [ ] 会使用 `substr(pos, len)`。
 - [ ] 会使用 `stoi / stoll / to_string`。
 - [ ] 知道 `isdigit()` 判断的是字符。
 - [ ] 会用 `const auto&` 遍历字符串数组以避免复制。
 - [ ] 能独立解析 `id:start/end:time` 格式字符串。
+- [ ] 能使用双倍字符串处理重复子串与旋转字符串。
+- [ ] 能处理重复拼接后的跨边界子串匹配。
