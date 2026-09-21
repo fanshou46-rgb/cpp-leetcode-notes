@@ -35,7 +35,8 @@
 - [KMP 字符串匹配](knowledge/kmp.md)：LPS、失配跳转与 O(n+m) 匹配。
 - [数组原地标记](knowledge/in-place-marking.md)：值到下标映射与正负号标记。
 - [栈基础](knowledge/stack-basics.md)：基础操作、表达式求值与调用栈。
-- [队列基础](knowledge/queue-basics.md)：FIFO、queue 基本操作、循环队列、模拟与 BFS。\n- [链表基础](knowledge/linked-list-basics.md)：节点、next 指针、遍历、插入删除与 dummy 虚拟头节点。
+- [队列基础](knowledge/queue-basics.md)：FIFO、queue 基本操作、循环队列、模拟与 BFS。
+- [链表基础](knowledge/linked-list-basics.md)：节点、next 指针、遍历、插入删除与 dummy 虚拟头节点。
 - [单调栈](knowledge/monotonic-stack.md)：寻找左右第一个更大/更小元素与摊还复杂度。
 - [堆基础](knowledge/heap-basics.md)：priority_queue、大小根堆、pair、tuple、最早截止优先与常见堆模型。
 - [经典题精选](classics/README.md)：按知识类型整理值得反复复习的代表题。
