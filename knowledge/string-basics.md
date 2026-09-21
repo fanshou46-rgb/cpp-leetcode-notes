@@ -291,4 +291,6 @@ while (getline(ss, part, '-')) {
 - [ ] 会用 `const auto&` 遍历字符串数组以避免复制。
 - [ ] 能独立解析 `id:start/end:time` 格式字符串。
 - [ ] 能使用双倍字符串处理重复子串与旋转字符串。
-- [ ] 能处理重复拼接后的跨边界子串匹配。\n- [ ] 会用 stringstream 按格式读取日期等字符串。\n- [ ] 会用 getline(ss, part, delimiter) 按分隔符切分字符串。
+- [ ] 能处理重复拼接后的跨边界子串匹配。
+- [ ] 会用 stringstream 按格式读取日期等字符串。
+- [ ] 会用 getline(ss, part, delimiter) 按分隔符切分字符串。
