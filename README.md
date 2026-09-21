@@ -15,14 +15,18 @@
 | 2026-09-16 | 堆逆向恢复、大小写判断 | [查看笔记](daily/2026-09-16.md) |
 | 2026-09-17 | 字符串格式化、字符过滤、重复子串判断 | [查看笔记](daily/2026-09-17.md) |
 | 2026-09-19 | 数组、单调栈、字符串匹配、旋转字符串、KMP | [查看笔记](daily/2026-09-19.md) |
+| 2026-09-20 | 贪心、小根堆、最早过期优先、循环队列原理 | [查看笔记](daily/2026-09-20.md) |
+| 2026-09-21 | 循环队列实现、短路求值、空容器访问安全 | [查看笔记](daily/2026-09-21.md) |
 
 ## 重点题目
 
 - [84. 柱状图中最大的矩形](problems/84-largest-rectangle-in-histogram/)：单调栈、左右双 0 哨兵。
 - [373. 查找和最小的 K 对数字](problems/373-k-smallest-pairs/)：小根堆、tuple、多路归并。
+- [622. 设计循环队列](problems/622-design-circular-queue/)：数组、循环下标、front + count。
 - [645. 错误的集合](problems/645-set-mismatch/)：计数、原地标记、位运算。
 - [1046. 最后一块石头的重量](problems/1046-last-stone-weight/)：大根堆。
 - [1354. 多次求和构造目标数组](problems/1354-construct-target-array-with-multiple-sums/)：大根堆、逆向思维、取模优化。
+- [1705. 吃苹果的最大数目](problems/1705-maximum-number-of-eaten-apples/)：贪心、小根堆、最早过期优先。
 
 ## 知识专题
 
@@ -31,9 +35,9 @@
 - [KMP 字符串匹配](knowledge/kmp.md)：LPS、失配跳转与 O(n+m) 匹配。
 - [数组原地标记](knowledge/in-place-marking.md)：值到下标映射与正负号标记。
 - [栈基础](knowledge/stack-basics.md)：基础操作、表达式求值与调用栈。
-- [队列基础](knowledge/queue-basics.md)：FIFO、queue 基本操作、模拟与 BFS。
+- [队列基础](knowledge/queue-basics.md)：FIFO、queue 基本操作、循环队列、模拟与 BFS。
 - [单调栈](knowledge/monotonic-stack.md)：寻找左右第一个更大/更小元素与摊还复杂度。
-- [堆基础](knowledge/heap-basics.md)：priority_queue、大小根堆、pair、tuple 与常见堆模型。
+- [堆基础](knowledge/heap-basics.md)：priority_queue、大小根堆、pair、tuple、最早截止优先与常见堆模型。
 - [经典题精选](classics/README.md)：按知识类型整理值得反复复习的代表题。
 
 ## 记录原则
