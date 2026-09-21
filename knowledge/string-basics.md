@@ -233,7 +233,53 @@ a += a;
 
 因为这会使字符串长度不断翻倍。
 
-## 十一、复习清单
+## 十一、stringstream：按格式解析字符串
+
+需要头文件：
+
+~~~cpp
+#include <sstream>
+~~~
+
+stringstream 可以把一个 string 当成输入流，像 cin 一样按顺序读取数据。
+
+例如日期：
+
+~~~cpp
+string date = "2026-09-21";
+stringstream ss(date);
+
+int year, month, day;
+char c1, c2;
+
+ss >> year >> c1 >> month >> c2 >> day;
+~~~
+
+读取结果：
+
+~~~text
+year  = 2026
+month = 9
+day   = 21
+c1、c2 读取分隔符 '-'
+~~~
+
+适合这种“数字 + 固定分隔符 + 数字”的格式。
+
+如果需要按照某个分隔符切成多个字符串，也可以使用 getline：
+
+~~~cpp
+stringstream ss(s);
+string part;
+
+while (getline(ss, part, '-')) {
+    // 每次得到一段
+}
+~~~
+
+对固定格式日期，直接用 >> 读整数和分隔符通常最简洁。
+
+## 十二、复习清单
 
 - [ ] 会使用 `size / empty / front / back`。
 - [ ] 知道 `front / back` 前需要保证字符串非空。
@@ -245,4 +291,4 @@ a += a;
 - [ ] 会用 `const auto&` 遍历字符串数组以避免复制。
 - [ ] 能独立解析 `id:start/end:time` 格式字符串。
 - [ ] 能使用双倍字符串处理重复子串与旋转字符串。
-- [ ] 能处理重复拼接后的跨边界子串匹配。
+- [ ] 能处理重复拼接后的跨边界子串匹配。\n- [ ] 会用 stringstream 按格式读取日期等字符串。\n- [ ] 会用 getline(ss, part, delimiter) 按分隔符切分字符串。
