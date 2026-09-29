@@ -18,6 +18,8 @@
 | 2026-09-20 | 贪心、小根堆、最早过期优先、循环队列原理 | [查看笔记](daily/2026-09-20.md) |
 | 2026-09-21 | 循环队列、短路求值、链表、stringstream 日期解析 | [查看笔记](daily/2026-09-21.md) |
 | 2026-09-22 | 链表进阶、循环链表、存储结构、哈希表、两数之和 | [查看笔记](daily/2026-09-22.md) |
+| 2026-09-23 | 链表合并、约瑟夫环、随机指针链表、new 初始化 | [查看笔记](daily/2026-09-23.md) |
+| 2026-09-29 | 前缀和取模、哈希表、平衡数组、单调栈、连续子数组和 | [查看笔记](daily/2026-09-29.md) |
 
 ## 重点题目
 
@@ -28,6 +30,11 @@
 - [1046. 最后一块石头的重量](problems/1046-last-stone-weight/)：大根堆。
 - [1354. 多次求和构造目标数组](problems/1354-construct-target-array-with-multiple-sums/)：大根堆、逆向思维、取模优化。
 - [1705. 吃苹果的最大数目](problems/1705-maximum-number-of-eaten-apples/)：贪心、小根堆、最早过期优先。
+- 1590「使数组和能被 P 整除」：前缀和取模、目标余数、最短子数组。
+- 1664「生成平衡数组的方案数」：删除后右侧奇偶下标翻转、前缀/后缀统计。
+- 1019「链表中的下一个更大节点」：单调递减栈。
+- 523「连续的子数组和」：前缀和取模、相同余数、长度约束。
+- 1732「找到最高海拔」：滚动前缀和。
 
 ## 知识专题
 
@@ -38,7 +45,8 @@
 - [栈基础](knowledge/stack-basics.md)：基础操作、表达式求值与调用栈。
 - [队列基础](knowledge/queue-basics.md)：FIFO、queue 基本操作、循环队列、模拟与 BFS。
 - [链表基础](knowledge/linked-list-basics.md)：节点、next 指针、反转、dummy、快慢指针与循环链表。
-- [哈希表基础](knowledge/hash-table-basics.md)：unordered_map、查找/计数、复杂度与两数之和模型。
+- [哈希表基础](knowledge/hash-table-basics.md)：unordered_map、查找/计数、复杂度、指针映射与前缀余数映射。
+- [前缀和](knowledge/prefix-sum.md)：区间和、前缀和取模、同余关系与前缀和 + 哈希表。
 - [单调栈](knowledge/monotonic-stack.md)：寻找左右第一个更大/更小元素与摊还复杂度。
 - [堆基础](knowledge/heap-basics.md)：priority_queue、大小根堆、pair、tuple、最早截止优先与常见堆模型。
 - [经典题精选](classics/README.md)：按知识类型整理值得反复复习的代表题。
