@@ -232,3 +232,35 @@ if (cur->val == cur->next->val) {
 修改 next 后，会不会把后面的链表弄丢？
 head 会不会发生变化？
 ~~~
+
+
+## 十三、head / tail 与尾插
+
+创建链表时常同时维护 head 和 tail。第一次插入时让 head = tail = node，之后尾插时执行 tail->next = node; tail = node。维护 tail 后尾插可以做到 O(1)。
+
+## 十四、合并两个有序链表
+
+两个链表均有序时，用两个指针比较当前节点，把较小节点接到结果尾部；最后把剩余链表整体接上。使用 dummy 可以统一处理结果头节点：
+
+~~~cpp
+ListNode dummy(0);
+ListNode* tail = &dummy;
+// ...
+return dummy.next;
+~~~
+
+## 十五、p->next 与 nullptr
+
+p->next 等价于 (*p).next，但 p 必须指向有效对象。p == nullptr 时不能访问 p->next。链表遍历通常先判断 p != nullptr，再访问节点成员。
+
+## 十六、new(...) 与 new{...}
+
+new T(...) 使用圆括号直接初始化；new T{...} 使用花括号列表初始化。对于简单结构体，可以用花括号按成员顺序初始化，例如 new Node{x, nullptr}。
+
+## 十七、随机指针链表深拷贝
+
+随机指针链表可以使用 unordered_map<Node*, Node*> 建立“原节点地址 -> 新节点地址”的映射。第一遍创建所有新节点，第二遍用 mp[cur->next] 和 mp[cur->random] 连接新节点，从而保证新链表完全独立。
+
+## 十八、循环链表与约瑟夫环
+
+循环单链表中最后一个节点指向第一个节点，可以直接模拟约瑟夫环的报数和删除。删除本质仍是让前驱节点跳过当前节点：prev->next = cur->next。
