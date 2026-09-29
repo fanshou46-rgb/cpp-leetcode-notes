@@ -105,5 +105,25 @@ O(n)
 - LeetCode 503：下一个更大元素 II。
 - LeetCode 84：柱状图中最大的矩形。
 - LeetCode 316：去除重复字母（单调栈 + 贪心 + 去重状态）。
+- LeetCode 1019：链表中的下一个更大节点。
 
 前四题适合建立单调栈模板，84 难度更高。
+
+
+## 八、1019：链表中的下一个更大节点
+
+题目要求每个节点右侧第一个严格更大的节点。扫描链表时，当前节点负责解决前面还没有找到答案的较小节点。
+
+栈保存节点值和节点下标：
+
+~~~cpp
+stack<pair<int, int>> st;
+while (!st.empty() && cur->val > st.top().first) {
+    int index = st.top().second;
+    st.pop();
+    ans[index] = cur->val;
+}
+st.push({cur->val, index});
+~~~
+
+栈中的值保持单调递减。每个节点最多入栈一次、出栈一次，因此时间 O(n)，空间 O(n)。其核心模型与 739 每日温度相同。
