@@ -30,10 +30,10 @@
 - [1046. 最后一块石头的重量](problems/1046-last-stone-weight/)：大根堆。
 - [1354. 多次求和构造目标数组](problems/1354-construct-target-array-with-multiple-sums/)：大根堆、逆向思维、取模优化。
 - [1705. 吃苹果的最大数目](problems/1705-maximum-number-of-eaten-apples/)：贪心、小根堆、最早过期优先。
-- 1590「使数组和能被 P 整除」：前缀和取模、目标余数、最短子数组。
+- [1590. 使数组和能被 P 整除](problems/1590-make-sum-divisible-by-p/)：前缀和取模、目标余数、最短子数组。
 - 1664「生成平衡数组的方案数」：删除后右侧奇偶下标翻转、前缀/后缀统计。
-- 1019「链表中的下一个更大节点」：单调递减栈。
-- 523「连续的子数组和」：前缀和取模、相同余数、长度约束。
+- [1019. 链表中的下一个更大节点](problems/1019-next-greater-node-in-linked-list/)：单调递减栈。
+- [523. 连续的子数组和](problems/523-continuous-subarray-sum/)：前缀和取模、相同余数、长度约束。
 - 1732「找到最高海拔」：滚动前缀和。
 
 ## 知识专题
